@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<img class="responsive-img" width = "150" height = "150" src="/static/css/assets/images/userAvatar.jpg" alt="img broken">
+<h1> Welcome, {{user}}! </h1>
+<h2> Join Date: {{user.date_joined.date}}</h2>
+{% endblock %}
