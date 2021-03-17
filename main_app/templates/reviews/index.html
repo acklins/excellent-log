@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
-{% block content %}
-<br>
-<img class="responsive-img" width = "150" height = "150" src="/static/css/assets/images/userAvatar.jpg" alt="img broken">
-<h1> Welcome, {{user}}! </h1>
-<h2> Join Date: {{user.date_joined.date}}</h2>
+ {% block content %}
+
+<h1>Product List</h1>
+{% for product in products %}
+<div class="card">
+  <a href="{% url 'detail' product.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ product.name }}</span>
+      <p>Photo: {{ product.photo }}</p>
+      <p>Rating: {{ product.rating }}</p>
+      <p>Editorial Review: {{ product.editorial_review }}</p>
+    </div>
+  </a>
+</div>
+{% endfor %} 
+
 {% endblock %}
