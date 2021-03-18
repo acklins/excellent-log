@@ -3,8 +3,10 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
+
 from .models import User, Product
-from .forms import ProfileForm
+from .forms import ProfileForm, UserForm
+
 
 def home(request):
     return render(request, 'home.html')
@@ -36,14 +38,21 @@ def products_detail(request, product_id):
 def signup(request):
     error_message = ''
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        print(request.POST)
+        
+        form = UserForm(request.POST)
+        print(form.errors)
+        print(form)
         if form.is_valid():
+          
+            print('is valid')
             user = form.save()
             login(request, user)
-            return redirect('reviews')
+            return redirect('login')
         else:
+            print('is not valid')
             error_message = 'Invalid sign up - try again'
-    form = UserCreationForm()
+    form = UserForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
 
