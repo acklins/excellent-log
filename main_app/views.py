@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
 
-from .models import User, Product
+from .models import User, Product, Review
 from .forms import ProfileForm, UserForm
 
 
@@ -29,11 +29,20 @@ def update_profile(request, user_id):
 
 def products_index(request):
     products = Product.objects.all()
-    return render(request, 'reviews/index.html', {'products': products})
+    return render(request, 'products/index.html', {'products': products})
 
 def products_detail(request, product_id):
     product = Product.objects.get(id=product_id)
     return render(request, 'products/detail.html', {'product': product})
+
+# below are the review functions
+def reviews_index(request):
+    reviews = Review.objects.all()
+    return render(request, 'reviews/index.html', {'reviews': reviews})
+
+def reviews_detail(request, review_id):
+    review = Review.objects.get(id=review_id)
+    return render(request, 'reviews/detail.html', {'review': review})
 
 def signup(request):
     error_message = ''
