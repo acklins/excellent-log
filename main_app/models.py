@@ -8,8 +8,14 @@ class Product(models.Model):
     rating = models.IntegerField()
     editorial_review = models.TextField(max_length=250)
 
+    def __str__(self):
+        return self.name
+
 class Review(models.Model):
     review = models.TextField(max_length=250)
+
+    def __str__(self):
+        return self.review
 
 # M:M relationship
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
