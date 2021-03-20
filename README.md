@@ -4,7 +4,7 @@ Heroku Link:
 Project Description:
 
 App screenshots:
-![Reviews](main_app/static/css/Reviews_page.png)
+![alt text](main_app/static/css/Reviews_page.png)
 
 ERD diagram:
 
