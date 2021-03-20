@@ -14,17 +14,17 @@
         <nav>
             <div class="nav-wrapper blue">
                 <ul>
-                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;LA BOUTIQUE LOG</a></li>
+                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;LA BOUTIQUE LOG 精品日誌</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'about' %}">About 關於</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'index' %}">Reviews</a></li>
-                        <li><a href="{% url 'profile' %}">Profile</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
+                        <li><a href="{% url 'index' %}">Reviews 評論</a></li>
+                        <li><a href="{% url 'profile' %}">Profile 輪廓</a></li>
+                        <li><a href="{% url 'logout' %}">Log Out 登出</a></li>
                     {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
+                        <li><a href="{% url 'signup' %}">Sign Up 註冊</a></li>
+                        <li><a href="{% url 'login' %}">Log In 登錄</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -35,7 +35,7 @@
     {% endblock %}
     </main>
     <footer class="page-footer blue">
-        <div class="right"> All Rights Reserved &copy; 2021 acklins island</div>
+        <div class="right"> All Rights Reserved 保留所有權利 &copy; 2021 acklins island</div>
     </footer>
 </body>
 </html>

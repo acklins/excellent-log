@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
  {% block content %}
 
-<h1>Reviews</h1>
+<h1>Reviews 評論</h1>
 {% for review in reviews %}
 <div class="card">
   <a href="{% url 'detail' review.id %}">
