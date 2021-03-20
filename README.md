@@ -1,5 +1,10 @@
 # LA BOUTIQUE LOG
+Heroku Link:
+
+Project Description:
+
 App screenshots:
+![Reviews](main_app/static/css/Reviews page.png)
 
 ERD diagram:
 
@@ -11,24 +16,42 @@ QA Test Guide.txt added
 
 
 Installation instructions:
+Fork and clone this repo
+Run python3 -m venv .env
+Run source .env/bin/activate
+Run pip3 install django
+Run pip3 install psycopg2
+Run pip3 freeze > requirements.txt
+Run  pip3 install -r requirements.txt
+Run python3 manage.py runserver
+Run createdb techlux
+In settings.py file change to: DATABASES = {
+    'default': 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'techlux',
+Run python3 manage.py migrate    
+
+
+
 
 User Stories:
-A user should be able to navigate to "/" and see a basic splash page with:
+As a user I want to be able to navigate to "/" and see a basic splash page with:
 The name of the website.
 Links to "Log In" and "Sign Up" and
 Sign up for an account.
 
-A user should be able to log into their account if they already have one.
-Be redirected to their public profile page after logging in.
-On their public profile page, see their name, and their join date.
+As a user I want to be able to log into my account if I have one.
+Be redirected to the public profile page after logging in.
+On my public profile page, see my name, and the join date.
 See the site-wide header on every page with:
-A link to "Log Out" if they're logged in.
-Links to "Log In" and "Sign Up" if they're logged out.
-Update their profile by making changes to their name.
+A link to "Log Out" if I am logged in.
+Links to "Log In" and "Sign Up" if I am logged out.
+Update my profile by making changes to my name.
 
-An admin user should be able to add a review to the site through the admin panel.
+As an admin user I want to be able to add a review to the site through the admin panel.
 
 Unsolved Problems/major hurdles:
+
 -Extending django's built in user model and all it offers to keep the code DRY.
 Learning how to use it prevented building out a full profile model & kept the model file DRY.
 
