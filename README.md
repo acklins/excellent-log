@@ -1,21 +1,21 @@
 # LA BOUTIQUE LOG
-Heroku Link:
+# Heroku Link:
 
-Project Description:
+# Project Description:
 
-App screenshots:
+# App screenshots:
 ![alt text](main_app/static/css/Reviews_page.png)
 
-ERD diagram:
+# ERD diagram:
 
-Git project board screenshot:
+# Git project board screenshot:
 
-List of Technologies used:
+# List of Technologies used:
 i18n(internationalization) 
 QA Test Guide.txt added
 
 
-Installation instructions:
+# Installation instructions:
 Fork and clone this repo
 Run python3 -m venv .env
 Run source .env/bin/activate
@@ -34,7 +34,7 @@ Run python3 manage.py migrate
 
 
 
-User Stories:
+# User Stories:
 As a user I want to be able to navigate to "/" and see a basic splash page with:
 The name of the website.
 Links to "Log In" and "Sign Up" and
@@ -50,7 +50,7 @@ Update my profile by making changes to my name.
 
 As an admin user I want to be able to add a review to the site through the admin panel.
 
-Unsolved Problems/major hurdles:
+# Unsolved Problems/major hurdles:
 
 -Extending django's built in user model and all it offers to keep the code DRY.
 Learning how to use it prevented building out a full profile model & kept the model file DRY.
