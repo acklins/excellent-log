@@ -22,6 +22,12 @@ See the site-wide header on every page with:
 A link to "Log Out" if they're logged in.
 Links to "Log In" and "Sign Up" if they're logged out.
 Update their profile by making changes to their name.
-An admin user should be able to add a review to the site through the admin panel.
-Unsolved Problems/major hurdles:
 
+An admin user should be able to add a review to the site through the admin panel.
+
+Unsolved Problems/major hurdles:
+-Extending django's built in user model and all it offers to keep the code DRY.
+Learning how to use it prevented building out a full profile model & kept the model file DRY.
+
+-Enabling an email feature that accepts all emails, settled on gmail in the end.
+- Using UploadCare for the profile and product images. The 3rd party storage is a great resource for keeping memory DRY.
