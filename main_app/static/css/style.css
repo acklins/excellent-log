@@ -13,5 +13,10 @@ body {
     padding-top: 0;
     text-align: right;
   }
+  .profile_pic {
+    width: 100px;
+    height: auto;
+
+  }
   
   

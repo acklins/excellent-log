@@ -10,7 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+
 from pathlib import Path
+
+# from .email_info import * #means to import the below from email_info.py file
+# # for gmail or google apps 
+# EMAIL_USE_TLS = EMAIL_USE_TLS
+# EMAIL_HOST = EMAIL_HOST
+# EMAIL_HOST_USER = EMAIL_HOST_USER
+# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+# EMAIL_PORT = EMAIL_PORT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&1h+1rz3x^boqmu1daggflibi-w8*#7!p$utmwh+=g-ea^j@sl'
+SECRET_KEY = '&1h+1rz3x^boqmu1daggflibi-w8*#7!p$utmwh+=g-ea^j@sl' 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,6 +42,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main_app',
+    'pyuploadcare.dj',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +66,7 @@ ROOT_URLCONF = 'Techlux.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,6 +111,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+UPLOADCARE = {
+    'pub_key' : '8dd00bfa5a3acc9bc7a1',
+    'secret' : '0cc8587af9670ee6d797',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
