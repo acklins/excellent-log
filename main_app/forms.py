@@ -10,7 +10,7 @@ class ProfileForm(forms.ModelForm):
         fields = ['username']
 
 class ProfilePicForm(forms.ModelForm):
-    profile_pic = ImageField(label='')
+    profile_pic = ImageField(label='upload picture')
     class Meta:
         model = Profile
         fields = ('profile_pic',)

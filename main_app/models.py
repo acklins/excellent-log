@@ -6,7 +6,8 @@ from pyuploadcare.dj.models import ImageField
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
-    photo = models.CharField(max_length=100) #ImageField(blank=True, manual_crop="")
+    photo = models.CharField(max_length=100)
+    photo_prod = ImageField(blank=True, manual_crop="")
     rating = models.IntegerField()
     editorial_review = models.TextField(max_length=250)
 
@@ -18,10 +19,11 @@ class Profile(models.Model):
      profile_pic = ImageField(blank=True, manual_crop="")
 
      def __str__(self):
-         return self.name
+         return self.user.username
 
 class Review(models.Model):
     review = models.TextField(max_length=250)
+    photo = ImageField(blank=True, manual_crop="")
 
     def __str__(self):
         return self.review

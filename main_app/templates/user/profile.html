@@ -1,12 +1,25 @@
-{% extends 'base.html' %}
-{% block content %}
-<br>
-<img class="responsive-img" width = "150" height = "150" src="/static/css/assets/images/userAvatar.jpg" alt="img broken">
-<img src="{{user.profile.profile_pic}}" class="profile_pic" alt="profile photo"/>
-<h1> Welcome, {{user.username}}! </h1>
-<h2> Join Date: {{user.date_joined.date}}</h2>
+{% extends 'base.html' %} {% block content %}
+<br />
+{% if user.profile.profile_pic %}
+<img
+  src="{{user.profile.profile_pic}}"
+  class="profile_pic"
+  alt="profile photo"
+/>
+{% else %}
+<img
+  class="responsive-img"
+  width="150"
+  height="150"
+  src="/static/css/assets/images/userAvatar.jpg"
+  alt="img broken"
+/>
+{% endif %}
+
+
+<h1>Welcome, {{user.username}}!</h1>
+<h2>Join Date: {{user.date_joined.date}}</h2>
 
 <a class="btn" href="{% url 'update_profile' user.id %}">Update Profile</a>
 
 {% endblock %}
-

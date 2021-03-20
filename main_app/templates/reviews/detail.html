@@ -1,9 +1,15 @@
-{% extends 'base.html' %}
- {% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1>Review Details</h1>
 <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ review.review }}</span>
-    </div>
+  <div class="card-content">
+    <span class="card-title">{{ review.review }}</span>
+    {% if review.photo%}
+    <img
+      src="{{review.photo}}"
+      class="photo"
+      alt="product photo"
+    />
+    {% endif%}
+  </div>
 </div>
 {% endblock %}

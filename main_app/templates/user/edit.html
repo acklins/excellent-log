@@ -4,6 +4,8 @@
 
 <form method="POST" action="{%  url 'update_profile' user.id %}">
   {% csrf_token %} 
+  {{profile_pic_form.as_p}}
+  {{profile_pic_form.media}}
   {{ profile_form.as_p }}
   <input type="submit" class="btn" value="Update Profile" />
 </form>

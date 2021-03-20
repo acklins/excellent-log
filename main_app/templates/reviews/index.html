@@ -7,6 +7,13 @@
   <a href="{% url 'detail' review.id %}">
     <div class="card-content">
       <span class="card-title">{{ review.review }}</span>
+      {% if review.photo%}
+    <img
+      src="{{review.photo}}"
+      class="photo"
+      alt="product photo"
+    />
+    {% endif%}
     </div>
   </a>
 </div>

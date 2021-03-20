@@ -15,9 +15,28 @@ body {
     text-align: right;
   }
   .profile_pic {
-    width: 100px;
+    width: 300px;
+    border-radius: 50%;
     height: auto;
 
   }
+  label {
+    font-size: 1.2rem;
+    color: black;
+  }
+  .photo{
+    width: 300px;
+    height: auto;
+  }
+  .card {
+    border-radius: 10px;
+}
   
+@media (max-width: 500px) {
+  .responsive-logo{
+    display: none;
+
+  }
+
+}
   
