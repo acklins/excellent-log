@@ -6,6 +6,9 @@ ERD diagram:
 Git project board screenshot:
 
 List of Technologies used:
+i18n(internationalization) 
+QA Test Guide.txt added
+
 
 Installation instructions:
 
