@@ -15,6 +15,7 @@ can add and post product reviews.
 ![alt text](main_app/static/css/assets/images/UpdateProfile.png)
 
 # ERD diagram:
+![alt text](main_app/static/css/assets/images/dbDiagram.png)
 
 # Kanban-style scrum board selection:
 ![alt text](main_app/static/css/assets/images/gitProject.png)
