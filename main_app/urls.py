@@ -9,7 +9,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('profile/<int:user_id>/edit/', views.update_profile, name='update_profile'),
 
-    # path('profile_pic/<int:profile_pic_id>/edit/', views.update_profile_pic, name='update_profile_pic'),
+    #path('profile/<int:profile_pic_id>/edit/', views.update_profile, name='update_profile_pic'),
     
     path('products/', views.products_index, name='index'),
     path('products/<int:product_id>/', views.products_detail, name='detail'),

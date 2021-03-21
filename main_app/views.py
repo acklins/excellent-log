@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib import messages
-# from django.core.mail import send_mail
+from email_info import *
 from django.contrib.auth import login 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -8,9 +8,6 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from .models import User, Product, Review, Profile
 from .forms import ProfileForm, UserForm, ProfilePicForm
-
-# def home(request):
-#     return render(request, 'home.html')#can I delete since review page is splash page
 
 def about(request):
     return render(request, 'about.html')
@@ -20,7 +17,7 @@ def profile(request):
 
 @login_required
 def update_profile(request, user_id):
-    user = User.objects.get(id=user_id)
+    user = User.objects.get(id=request.user.id)
     profile = Profile.objects.get(user=request.user) #querying the model
     profile_pic_form = ProfilePicForm(request.POST or None, instance=profile)
     profile_form = ProfileForm(request.POST or None, instance=user)
@@ -58,6 +55,13 @@ def signup(request):
         if form.is_valid():
             print('is valid')
             user = form.save()
+            profile = Profile(user=user)
+            profile.save()
+            subject = 'Thank you for your request from La Boutique Log./n感谢您对La Boutique Log的要求 '
+            message = 'Welcome to LBL! We appreciate your business./n欢迎来到LBL！我们感谢您的业务'
+            from_email = 'belugadel6@gmail.com'
+            to_list = [user.email]
+            send_mail(subject, message, from_email,  to_list, fail_silently=True)
             login(request, user)
             return redirect('home') 
         else:
@@ -66,22 +70,3 @@ def signup(request):
     form = UserForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
-
-# def thankyou(request):
-#     for = SignUpForm(request.POST or None)
-#     if form.is_valid():
-#         save_it = form.save(commit=False)
-#         save_it.save()
-#         # send_mail(subject, message, from_email, to_list, fail_silently=True)
-#         subject = 'Thank you for your request from La Boutique Log./n '
-#         message = 'Welcome to LBL! We appreciate your business./n'
-#         from_email = settings.EMAIL_HOST_USER
-#         to_list = [save_it.email, settings.EMAIL_HOST_USER]
-
-#         semd_mail(subject, message, from_email,  to_list, fail_silently=True )
-
-#         messages.success(request, 'Thank you for your request. We will be in touch.')
-#         return HttpResponseRedirect('/thank-you/')
-#     return render_to_response("thankyou.html",
-#                                 locals(),
-#                                 context_instance=RequestContext(request))

@@ -1,5 +1,4 @@
 # LA BOUTIQUE LOG
-# Heroku Link:
 
 # Project Description:
 
@@ -30,9 +29,7 @@ In settings.py file change to: DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'techlux',
 Run python3 manage.py migrate    
-
-
-
+Open browser to Localhost:8000
 
 # User Stories:
 As a user I want to be able to navigate to "/" and see a basic splash page with:
