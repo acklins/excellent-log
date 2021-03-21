@@ -10,7 +10,7 @@
 ![alt text](main_app/static/css/assets/images/UpdateProfile.png)
 
 # ERD diagram:
-
+![alt text] (main_app/static/css/assets/images/gitProject.png)
 # Git project board screenshot:
 
 # List of Technologies used:
