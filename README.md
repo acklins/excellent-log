@@ -1,6 +1,11 @@
 # LA BOUTIQUE LOG
 
 # Project Description:
+This app is a tech review site, named La Boutique Log, 
+it builds out basic auth for users and an admin. 
+Where a user can see reviews, update their 
+name and add a profile picture. The site admin 
+can add and post product reviews.
 
 # App screenshots:
 ![alt text](main_app/static/css/Reviews_page.png)
@@ -10,12 +15,16 @@
 ![alt text](main_app/static/css/assets/images/UpdateProfile.png)
 
 # ERD diagram:
-![alt text](main_app/static/css/assets/images/gitProject.png)
-# Git project board screenshot:
 
-# List of Technologies used:
+# Kanban-style scrum board selection:
+![alt text](main_app/static/css/assets/images/gitProject.png)
+
+# List of Technologies and Industry concepts/practices used:
+python
+django
+Materialize
 i18n(internationalization) 
-QA Test Guide.txt added
+QA Test Guidance doc
 
 
 # Installation instructions:
@@ -31,7 +40,7 @@ Run createdb techlux
 In settings.py file change to: DATABASES = {
     'default': 
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'techlux',
+        'NAME': 'labou',
 Run python3 manage.py migrate    
 Open browser to Localhost:8000
 
