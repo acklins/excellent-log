@@ -5,7 +5,7 @@
 # App screenshots:
 ![alt text](main_app/static/css/Reviews_page.png)
 ![alt text](main_app/static/css/assets/profilePage.png)
-![alt text](main_app/static/css/assets/profilePage.png)
+![alt text](main_app/static/css/assets/images/LogInPage.png)
 ![alt text](main_app/static/css/assets/images/SignUp.png)
 
 # ERD diagram:
