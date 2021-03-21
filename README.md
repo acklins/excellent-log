@@ -7,6 +7,7 @@
 ![alt text](main_app/static/css/assets/profilePage.png)
 ![alt text](main_app/static/css/assets/images/LogInPage.png)
 ![alt text](main_app/static/css/assets/images/SignUp.png)
+![alt text](main_app/static/css/assets/images/UpdateProfile.png)
 
 # ERD diagram:
 

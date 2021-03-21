@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'Techlux.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'techlux',
+        'NAME': 'labou',
     }
 }
 
