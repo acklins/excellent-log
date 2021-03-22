@@ -10,6 +10,11 @@ body {
     flex: 1 0 auto;
   }
   
+  div img .maokong {
+    display:inline-block;
+    border-radius: 50%;
+  }
+  
   footer {
     padding-top: 0;
     text-align: right;
