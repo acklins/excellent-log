@@ -15,11 +15,7 @@
   alt="img broken"
 />
 {% endif %}
-
-
 <h1>Welcome, Nǐ hǎo, {{user.username}}!</h1>
 <h2>Join Date: 入会日期: {{user.date_joined.date}}</h2>
-
 <a class="btn" href="{% url 'update_profile' user.id %}">Update Profile</a>
-
 {% endblock %}

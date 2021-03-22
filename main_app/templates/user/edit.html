@@ -1,7 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h1>Update Profile 更新配置文件</h1>
-
 <form method="POST" action="{%  url 'update_profile' user.id %}">
   {% csrf_token %} 
   {{profile_pic_form.as_p}}
@@ -10,3 +9,4 @@
   <input type="submit" class="btn" value="Update Profile" />
 </form>
 {% endblock content %}
+
