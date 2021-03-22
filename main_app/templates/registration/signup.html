@@ -2,7 +2,7 @@
 {% if error_message %}<p class="red-text">{{ error_message }}</p>
 {% endif %}
 {% block content %}
-<h1>Sign Up</h1>
+<h1>Sign Up 报名</h1>
 
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
