@@ -1,41 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>LA BOUTIQUE LOG</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
     <header class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper blue">
-                <ul>
-                    <li class="responsive-logo"><a href="/" class="left brand-logo">&nbsp;&nbsp;LA BOUTIQUE LOG 精品日誌</a></li>
-                </ul>
-                <ul class="right">
-                    <li><a href="{% url 'about' %}">About 關於</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'index' %}">Reviews 評論</a></li>
-                        <li><a href="{% url 'profile' %}">Profile 輪廓</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out 登出</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up 註冊</a></li>
-                        <li><a href="{% url 'login' %}">Log In 登錄</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <div class="nav-wrapper blue">
+          <ul>
+            <li class="responsive-logo">
+              <a href="/" class="left brand-logo"
+                >&nbsp;&nbsp;LA BOUTIQUE LOG 精品日誌</a
+              >
+            </li>
+          </ul>
+          <ul class="right">
+            <li><a href="{% url 'about' %}">About 關於</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'index' %}">Reviews 評論</a></li>
+            <li><a href="{% url 'profile' %}">Profile 輪廓</a></li>
+            <li><a href="{% url 'logout' %}">Log Out 登出</a></li>
+            {% else %}
+            <li><a href="{% url 'signup' %}">Sign Up 註冊</a></li>
+            <li><a href="{% url 'login' %}">Log In 登錄</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
     </header>
-    <main class="container">
-    {% block content %}
-    {% endblock %}
-    </main>
+    <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer blue">
-        <div class="right"> All Rights Reserved 保留所有權利 &copy; 2021 acklins island</div>
+      <div class="right">
+        All Rights Reserved 保留所有權利 &copy; 2021 acklins island
+      </div>
     </footer>
-</body>
+  </body>
 </html>
