@@ -10,7 +10,7 @@ body {
     flex: 1 0 auto;
   }
   
-  div img .maokong {
+  img .maokong {
     display:inline-block;
     border-radius: 50%;
   }
