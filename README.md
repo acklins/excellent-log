@@ -24,6 +24,7 @@ can add and post product reviews.
 python
 django
 Materialize
+google translate
 Adobe illustrator
 i18n(internationalization) 
 QA Test Guidance doc
