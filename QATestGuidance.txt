@@ -1,5 +1,5 @@
-Developer guidance  below of happy path for for QA documentation . 
-Guidance provides direction for writing and testing of the following:
+# Developer guidance  below of happy path for QA documentation . 
+# Guidance provides direction for writing and testing of the following:
 Mobile tests
 Cross browser tests
 Cross Device tests
@@ -9,7 +9,12 @@ i18N tests - Mandarin
 
 Site tour:
 Localhost:8000 splash page called reviews 
-administrator access log  in as username:: della password :y 
+-click on sign up 
+-see the bonus feature of the email field, 
+ enter a <user name >  &  <email>  &  <password>
+
+- sign up successful
+
 
 -see  the following tabs About, Reviews, Profile and Log Out 
 
@@ -17,30 +22,29 @@ administrator access log  in as username:: della password :y
 
 -click on Reviews - see a list of reviews 
 
--click on Profile - profile page loads with the image, see the default profile picture, the joined date & the update capability
+-click on Profile - profile page loads with the image, 
+see the default profile picture, the joined date & the update capability
 
--click on update profile and ensure the page loads well with gentle reminders to the user about the naming conventions
+-click on update profile and ensure the page loads well with 
+gentle reminders to the user about the naming conventions
 
-- before logging out go to the admin panel via localhost:8000/admin
+-click on Log out -see About, Sign Up and Log In tabs
+
+- go to the admin panel via localhost:8000/admin
+
+-administrator access  username:: della password :y 
 
 -click on Product - enter < a product name> 
 - select an image 
 - select rating 
-- write text in editorial review of 250(models.py)
+- write text in editorial review of max 250(models.py)
 
 -click on Reviews - add a review, select a product, 3 options with 2 outcomes:: as the admin
 - click on no user - error message is displayed asking the admin to select a user
 -click on my name - della -  the review is created
 -click on another users name - the review is created
 
--click on view site - see the splash page
-
--click on Log out -see About, Sign Up and Log In tabs
-
--click on sign up -see the bonus feature of the email field, 
- enter a <user name >  &  <email>  &  <password>
-
-- sign up successful
+-click on view site - see the list of reviews
 
 -now the user has the ability to click on 
 -About - see the about La Boutique Log
