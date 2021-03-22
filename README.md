@@ -2,8 +2,9 @@
 
 # Project Description:
 This app is a tech review site, named La Boutique Log, 
-it builds out basic auth for users and an admin. 
-Where a user can see reviews, update their 
+it builds out basic auth for users. The create ability is 
+handled by the admin. 
+A user can see reviews, update their 
 name and add a profile picture. The site admin 
 can add and post product reviews.
 
