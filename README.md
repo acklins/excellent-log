@@ -24,13 +24,13 @@ can add and post product reviews.
 ![alt text](main_app/static/css/assets/images/gitProject.png)
 
 # List of Technologies and Industry concepts/practices used:
-python
-django
-Materialize
-google translate
-Adobe illustrator
-i18n(internationalization) 
-QA Test Guidance doc
+-python
+-django
+-Materialize
+-google translate
+-Adobe illustrator
+-i18n(internationalization) 
+-QA Test Guidance doc
 
 
 # Installation instructions:

@@ -8,13 +8,16 @@ Regression tests (code rollback)
 i18N tests - Mandarin
 
 Site tour:
+
 Localhost:8000 splash page called reviews 
+
 -click on sign up 
+
 -see the bonus feature of the email field, 
+
  enter a <user name >  &  <email>  &  <password>
 
 - sign up successful
-
 
 -see  the following tabs About, Reviews, Profile and Log Out 
 
