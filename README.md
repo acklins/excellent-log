@@ -13,6 +13,7 @@ can add and post product reviews.
 ![alt text](main_app/static/css/assets/images/LogInPage.png)
 ![alt text](main_app/static/css/assets/images/SignUp.png)
 ![alt text](main_app/static/css/assets/images/UpdateProfile.png)
+![alt text](main_app/static/css/assets/images/reviewsDetals.png)
 
 # ERD diagram:
 ![alt text](main_app/static/css/assets/images/dbDiagram.png)
