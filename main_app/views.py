@@ -17,8 +17,8 @@ def profile(request):
 
 @login_required
 def update_profile(request, user_id):
-    user = User.objects.get(id=request.user.id)
-    profile = Profile.objects.get(user=request.user) #querying the model
+    user = User.objects.get(id=user_id)
+    profile = Profile.objects.get(user=user) 
     profile_pic_form = ProfilePicForm(request.POST or None, instance=profile)
     profile_form = ProfileForm(request.POST or None, instance=user)
     if request.POST and  profile_form.is_valid():
