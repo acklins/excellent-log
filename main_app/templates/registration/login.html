@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <h1>Log In 登录</h1>
-
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
